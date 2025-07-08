@@ -53,7 +53,7 @@ function import_siswa($conn, $file) {
 }
 
 ```
-#### C. Jalankan dari URL Browser
+#### D. Jalankan dari URL Browser
 
 ```
 http://127.0.0.1/csv_import/index.php
