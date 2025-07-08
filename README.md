@@ -20,7 +20,18 @@
    - Tipe data yang didukung bisa disesuaikan (misalnya, INT, BIGINT, VARCHAR, DATE, DECIMAL, dll.).
 ```
 
-#### A. Persiapkan Tabel dan Field yang dihutuhkan
+#### A. Konfigurasi Server Databse
+```
+// Database configuration
+$db_config = [
+    'host' => 'localhost',     //atau Host Conainer DB yang aktif jika menggunkaan Docker Server 
+    'user' => 'root',
+    'pass' => '',
+    'db' => 'csv_import_db'   // Nama Database
+];
+```
+
+#### B. Persiapkan Tabel dan Field yang dihutuhkan
 ```
 // Table definitions with column names and their data types
 $tables = [
@@ -33,7 +44,7 @@ $tables = [
     ],
 ```
 
-#### B. Duplikasikan sesuai fungsi Tabel yang dibutuhkan 
+#### C. Duplikasikan sesuai fungsi Tabel yang dibutuhkan 
 ```
 // Specific import functions
 function import_siswa($conn, $file) {
@@ -42,4 +53,8 @@ function import_siswa($conn, $file) {
 }
 
 ```
+#### C. Jalankan dari URL Browser
 
+```
+http://127.0.0.1/csv_import/index.php
+```
