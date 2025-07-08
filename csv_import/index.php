@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic CSV Import System</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .error { color: red; }
-        .success { color: green; }
-        .table-option { margin-bottom: 1rem; }
-    </style>
-</head>
-<body class="bg-gray-100 min-h-screen">
 <?php
 session_start();
 
@@ -184,6 +169,22 @@ if (is_logged_in() && isset($_FILES['csv_files']) && !empty($_FILES['csv_files']
     mysqli_close($conn);
 }
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic CSV Import System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .error { color: red; }
+        .success { color: green; }
+        .table-option { margin-bottom: 1rem; }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen">
+
 
 <?php if (!is_logged_in()): ?>
 <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-xl">
